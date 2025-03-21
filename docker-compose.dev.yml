@@ -1,0 +1,43 @@
+services:
+  api:
+    build:
+      context: ./server
+      args:
+        - NODE_ENV=development
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    depends_on:
+      - db
+    command: npm run dev
+
+  client:
+    build:
+      context: ./client
+      args:
+       - NODE_ENV=development
+    environment:
+     - NODE_ENV=development
+    volumes:
+      - ./client/:/app
+      - /app/node_modules
+    depends_on:
+      - api
+    command: npm run dev
+
+
+  db:
+    image: mongo
+    ports:
+      - 2817:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=kephas
+      - MONGO_INITDB_ROOT_PASSWORD=test
+    volumes:
+      - mongo-db:/data/db
+
+
+volumes:
+  mongo-db:

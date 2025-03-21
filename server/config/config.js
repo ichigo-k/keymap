@@ -1,0 +1,16 @@
+export default {
+    PORT:process.env.SERVER_PORT,
+    GOOGLE_CLIENT_ID:process.env.GOOGLE_CLIENT_ID,
+    GOOGLE_CLIENT_SECRET:process.env.GOOGLE_CLIENT_SECRET,
+    GITHUB_CLIENT_ID:process.env.GITHUB_CLIENT_ID,
+    GITHUB_CLIENT_SECRET:process.env.GITHUB_CLIENT_SECRET,
+    MICROSOFT_CLIENT_ID:process.env.MICROSOFT_CLIENT_ID,
+    MICROSOFT_CLIENT_SECRET:process.env.MICROSOFT_CLIENT_SECRET,
+    JWT_SECRET:process.env.JWT_SECRET || "ILOVEHIM",
+    MONGO_IP: process.env.MONGO_IP || "db",
+    MONGO_PORT: process.env.MONGO_PORT || 27017,
+    MONGO_USER: process.env.MONGO_USER,
+    MONGO_PASSWORD: process.env.MONGO_PASSWORD,
+    CLIENT_URL:process.env.CLIENT_URL,
+    GEMINI_API_KEY:process.env.GEMINI_API_KEY
+}
