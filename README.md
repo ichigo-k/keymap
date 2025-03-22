@@ -90,7 +90,5 @@ docker-compose -f ./docker-compose.dev.yml -f ./docker-compose.yml up --build
 ```
 This will start both the backend and frontend services using Docker, making the application ready to run in your local environment.
 
-### Live Url
-```markdown
-   [ Live Project ](https://keymap-six.vercel.app/)
-```
+[ Live Project ](https://keymap-six.vercel.app/)
+
