@@ -22,7 +22,7 @@ const DropDown = ({ setDropDown }) => {
                 Dashboard
             </Link>
             <button className="flex items-center gap-2 px-4 py-2 w-full text-red-600 hover:bg-gray-100"
-                    onClick={() => logout(navigate)}>
+                    onClick={logout(navigate)}>
                 <LogOut size={18} />
                 Logout
             </button>
