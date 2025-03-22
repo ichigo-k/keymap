@@ -44,7 +44,7 @@ const useAuthStore = create((set) => ({
         set({ isLoading: true });
 
         try {
-            await axios.get(`${SERVER_URL}/auth/logout`, { withCredentials: true });
+            const response = await axios.get(`${SERVER_URL}/auth/logout`, { withCredentials: true });
             set({ user: null, isAuth: false }); // Ensure state is cleared
             navigate("/", { replace: true });
         } catch (error) {
